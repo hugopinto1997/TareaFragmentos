@@ -4,13 +4,23 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Autos"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="italic"
+        android:background="#000000"
+        android:textColor="#ffffff"/>
 
     <ListView
         android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#ffffff"
-
+        android:background="#48cf2f"
+        android:cacheColorHint="#ffffff"
         >
     </ListView>
 
@@ -19,6 +29,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:background="#ffffff"
+        android:textColorHint="#ffffff"
         >
     </TextView>
 

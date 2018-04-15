@@ -2,7 +2,7 @@
     <string name="app_name">FragmentApp</string>
 
     <string-array name="Planets">
-        <item>Lamborghini Huracán</item>
+        <item color="#ffffff" background="#ffffff">Lamborghini Huracán</item>
         <item>Ferrari LaFerrari</item>
         <item>Mercedes Benz AMG GTR</item>
         <item>Porsche 918 Spyder</item>

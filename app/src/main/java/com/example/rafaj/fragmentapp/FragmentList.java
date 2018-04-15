@@ -35,9 +35,9 @@ public class FragmentList extends ListFragment implements AdapterView.OnItemClic
 
 
     public void instanciarauto(){
-        lamborghini = new auto("Lamborghini Huracán","Year: 2017", "Top Speed: 285km/h",R.drawable.lamborghni);
-        laferrari = new auto("Ferrari LaFerrari", "Year: 2015", "Top Speed: 400km/h", R.drawable.laferrari);
-        mbgtr = new auto("Mercedes Benz GTR", "Year: 2016", "Top Speed: 357km/h", R.drawable.amggtr);
+        lamborghini = new auto("Lamborghini Huracán","Year: 2017", "Top Speed: 285km/h",R.drawable.lmbh);
+        laferrari = new auto("Ferrari LaFerrari", "Year: 2015", "Top Speed: 400km/h", R.drawable.flf);
+        mbgtr = new auto("Mercedes Benz GTR", "Year: 2016", "Top Speed: 357km/h", R.drawable.gtrpng);
         porsche918s = new auto("Porsche 918 Spyder", "Year: 2018", "Top Speed: 290km/h", R.drawable.p918s);
         bugatti = new auto("Bugatti Veyron", "Year: 2009", "Top Speed: 420km/h", R.drawable.vb);
         Tesla= new auto("Tesla Model S", "Year: 2014", "Top Speed: 435km/h", R.drawable.tms);
