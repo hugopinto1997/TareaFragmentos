@@ -2,14 +2,14 @@
     <string name="app_name">FragmentApp</string>
 
     <string-array name="Planets">
-        <item>Sun</item>
-        <item>Mercury</item>
-        <item>Venus</item>
-        <item>Earth</item>
-        <item>Mars</item>
-        <item>Jupiter</item>
-        <item>Saturn</item>
-        <item>Uranus</item>
-        <item>Neptune</item>
+        <item>Lamborghini Huracán</item>
+        <item>Ferrari LaFerrari</item>
+        <item>Mercedes Benz AMG GTR</item>
+        <item>Porsche 918 Spyder</item>
+        <item>Bugatti Veyron</item>
+        <item>Tesla Model S</item>
+        <item>Lexus LFA</item>
+        <item>Audi R8 V10 Plus</item>
+        <item>Koennisegg Regera</item>
     </string-array>
 </resources>
