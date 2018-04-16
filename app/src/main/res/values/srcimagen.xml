@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="iconos">
+        <item>@drawable/lmbh</item>
+        <item>@drawable/flf</item>
+        <item>@drawable/gtrpng</item>
+        <item>@drawable/p918s</item>
+        <item>@drawable/vb</item>
+        <item>@drawable/tms</item>
+        <item>@drawable/lfs</item>
+        <item>@drawable/v10</item>
+        <item>@drawable/kgr</item>
+    </array>
+
+
+
+
+
+
+
+
+
+</resources>

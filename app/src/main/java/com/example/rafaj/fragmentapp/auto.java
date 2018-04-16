@@ -1,30 +1,21 @@
 package com.example.rafaj.fragmentapp;
 
-public class auto {
-    String nombre, año, velocidad;
-    int imagen;
+import java.io.Serializable;
 
-    public auto(String nombre, String año, String velocidad, int imagen) {
+public class auto implements Serializable{
+    String nombre;
+    String ano;
+    String veloc;
+    String imagen;
+
+
+
+
+    public auto(String nombre, String ano, String veloc, String imagen) {
         this.nombre = nombre;
-        this.año = año;
-        this.velocidad = velocidad;
+        this.ano = ano;
+        this.veloc = veloc;
         this.imagen = imagen;
-    }
-
-    public int getImagen() {
-        return imagen;
-    }
-
-    public void setImagen(int imagen) {
-        this.imagen = imagen;
-    }
-
-    public String getVelocidad() {
-        return velocidad;
-    }
-
-    public void setVelocidad(String velocidad) {
-        this.velocidad = velocidad;
     }
 
     public String getNombre() {
@@ -35,11 +26,27 @@ public class auto {
         this.nombre = nombre;
     }
 
-    public String getAño() {
-        return año;
+    public String getAno() {
+        return ano;
     }
 
-    public void setAño(String año) {
-        this.año = año;
+    public void setAno(String ano) {
+        this.ano = ano;
+    }
+
+    public String getVeloc() {
+        return veloc;
+    }
+
+    public void setVeloc(String veloc) {
+        this.veloc = veloc;
+    }
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
 }

@@ -1,37 +1,46 @@
 package com.example.rafaj.fragmentapp;
 
 import android.content.Intent;
+import android.content.res.Resources;
+import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.w3c.dom.ls.LSResourceResolver;
+
 public class Main2Activity extends AppCompatActivity {
-    TextView text;
+    TextView text, ano, vel;
+    ImageView img;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        text = findViewById(R.id.textId);
+        text.findViewById(R.id.textIdv);
+        ano.findViewById(R.id.yearv);
+        vel = findViewById(R.id.velv);
+        img = findViewById(R.id.imagen_autov);
 
-        Intent callingIntent = getIntent();
-        String intentAction = callingIntent.getAction();
-        String intentType = callingIntent.getType();
+        Intent intent = this.getIntent();
+        Bundle bundle = intent.getExtras();
 
-        if (Intent.ACTION_SEND.equals(intentAction) && intentType != null){
-            if (intentType.equals("text/plain")){
-                handleReceivedText(callingIntent);
-            }
-        }
+        auto carro = (auto)bundle.getSerializable("Llave");
+        Resources src = getResources();
+        TypedArray tipeado = src.obtainTypedArray(R.array.iconos);
+        Drawable draw = tipeado.getDrawable(Integer.parseInt(carro.getImagen()));
+
+        text.setText(carro.getNombre());
+        img.setImageDrawable(draw);
+        ano.setText(carro.getAno());
+        vel.setText(carro.getVeloc());
+
+
 
     }
 
-    private void handleReceivedText(Intent intent){
-        String intentText = intent.getStringExtra(Intent.EXTRA_TEXT);
 
-        if (text != null){
-            text.setText(intentText);
-        }
-    }
 }
