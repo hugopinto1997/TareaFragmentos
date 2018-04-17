@@ -1,6 +1,9 @@
 package com.example.rafaj.fragmentapp;
 
 import android.app.Fragment;
+import android.content.res.Resources;
+import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,28 +17,34 @@ import android.widget.Toast;
  */
 
 public class FragmentViewer extends Fragment {
-    TextView text, vel, year;
-    ImageView image;
+    TextView text2, ano2, vel2;
+    ImageView img3;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.viewer_fragment, container, false);
 
-        text = view.findViewById(R.id.textId);
-        vel = view.findViewById(R.id.vel);
-        year = view.findViewById(R.id.year);
-        image = view.findViewById(R.id.imagen_auto);
+        text2=view.findViewById(R.id.textId);
+        ano2=view.findViewById(R.id.year);
+        vel2=view.findViewById(R.id.vel);
+        img3=view.findViewById(R.id.imagen_auto);
+
         Bundle bundle = this.getArguments();
 
+        if(bundle !=null){
+            auto nuevo = (auto)bundle.getSerializable("key");
 
-        if(bundle != null){
-            Toast.makeText(getActivity(), "Item: " + bundle.getString("KEY"), Toast.LENGTH_SHORT).show();
+            Resources res =getResources();
+            TypedArray icons = res.obtainTypedArray(R.array.iconos);
+            Drawable draw = icons.getDrawable(Integer.parseInt(nuevo.getImagen()));
 
-            text.setText(bundle.getString("KEY"));
-            year.setText(bundle.getString("KEY2"));
-            vel.setText(bundle.getString("KEY3"));
-            image.setImageResource(bundle.getInt("KEY4"));
+            text2.setText(nuevo.getNombre());
+            ano2.setText(nuevo.getAno());
+            vel2.setText(nuevo.getVeloc());
+            img3.setImageDrawable(draw);
         }
+
+
 
         return view;
     }

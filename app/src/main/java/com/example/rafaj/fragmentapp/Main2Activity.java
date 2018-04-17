@@ -19,20 +19,20 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-
-        text.findViewById(R.id.textIdv);
-        ano.findViewById(R.id.yearv);
-        vel = findViewById(R.id.velv);
+//vinculamos con los id del xml
+        text=findViewById(R.id.textIdv);
+        ano=findViewById(R.id.yearv);
+        vel=findViewById(R.id.velv);
         img = findViewById(R.id.imagen_autov);
-
+//hacemos un intent y ub bundle
         Intent intent = this.getIntent();
         Bundle bundle = intent.getExtras();
-
+//creamos cosas necesarias
         auto carro = (auto)bundle.getSerializable("Llave");
         Resources src = getResources();
         TypedArray tipeado = src.obtainTypedArray(R.array.iconos);
         Drawable draw = tipeado.getDrawable(Integer.parseInt(carro.getImagen()));
-
+// llenamos nuestro auto con las cosas
         text.setText(carro.getNombre());
         img.setImageDrawable(draw);
         ano.setText(carro.getAno());

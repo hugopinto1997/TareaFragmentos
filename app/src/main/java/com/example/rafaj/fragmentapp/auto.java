@@ -3,6 +3,7 @@ package com.example.rafaj.fragmentapp;
 import java.io.Serializable;
 
 public class auto implements Serializable{
+    //clase auto serializada
     String nombre;
     String ano;
     String veloc;

@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:background="#000000"
     tools:context="com.example.rafaj.fragmentapp.Main2Activity">
 
     <TextView
@@ -18,6 +19,7 @@
         android:textSize="30sp"
         android:fontFamily="sans-serif"
         android:textStyle="bold" />
+
     <ImageView
         android:paddingTop="10dp"
         android:id="@+id/imagen_autov"
